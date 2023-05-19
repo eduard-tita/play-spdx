@@ -1,0 +1,101 @@
+{
+  "SPDXID" : "SPDXRef-DOCUMENT",
+  "spdxVersion" : "SPDX-2.3",
+  "creationInfo" : {
+    "comment" : "Creation comment",
+    "created" : "2023-05-19T10:57:36Z",
+    "creators" : [ "Tool: Sonatype IQ Server - 1.160.0-01" ]
+  },
+  "name" : "pkg:maven/org.test.maven/maven-test-app@1.0.0-SNAPSHOT?type=jar",
+  "documentNamespace" : "https://github.com/sonatype/maven-test-app",
+  "packages" : [ {
+    "SPDXID" : "SPDXRef-maven-org.apache.logging.log4j-log4j-core-2.8.1",
+    "externalRefs" : [ {
+      "comment" : "source: SONATYPE",
+      "referenceCategory" : "SECURITY",
+      "referenceLocator" : "http://localhost:8070/ui/links/vln/sonatype-2021-4560",
+      "referenceType" : "advisory"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/org.apache.logging.log4j/log4j-core@2.8.1?type=jar",
+      "referenceType" : "purl"
+    }, {
+      "comment" : "source: NVD",
+      "referenceCategory" : "SECURITY",
+      "referenceLocator" : "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44832",
+      "referenceType" : "advisory"
+    }, {
+      "comment" : "source: NVD",
+      "referenceCategory" : "SECURITY",
+      "referenceLocator" : "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228",
+      "referenceType" : "advisory"
+    }, {
+      "comment" : "source: NVD",
+      "referenceCategory" : "SECURITY",
+      "referenceLocator" : "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45105",
+      "referenceType" : "advisory"
+    }, {
+      "comment" : "source: NVD",
+      "referenceCategory" : "SECURITY",
+      "referenceLocator" : "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5645",
+      "referenceType" : "advisory"
+    }, {
+      "comment" : "source: NVD",
+      "referenceCategory" : "SECURITY",
+      "referenceLocator" : "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45046",
+      "referenceType" : "advisory"
+    }, {
+      "comment" : "source: NVD",
+      "referenceCategory" : "SECURITY",
+      "referenceLocator" : "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-9488",
+      "referenceType" : "advisory"
+    } ],
+    "filesAnalyzed" : false,
+    "licenseConcluded" : "Apache-2.0",
+    "licenseDeclared" : "Apache-2.0",
+    "name" : "org.apache.logging.log4j:log4j-core",
+    "versionInfo" : "2.8.1"
+  }, {
+    "SPDXID" : "SPDXRef-maven-org.apache.logging.log4j-log4j-api-2.8.1",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/org.apache.logging.log4j/log4j-api@2.8.1?type=jar",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "licenseConcluded" : "Apache-2.0",
+    "licenseDeclared" : "Apache-2.0",
+    "name" : "org.apache.logging.log4j:log4j-api",
+    "versionInfo" : "2.8.1"
+  }, {
+    "SPDXID" : "SPDXRef-maven-org.test.maven-maven-test-app-1.0.0-SNAPSHOT",
+    "externalRefs" : [ {
+      "comment" : "type: CycloneDX",
+      "referenceCategory" : "SECURITY",
+      "referenceLocator" : "file://maven-test-app.bom.json",
+      "referenceType" : "advisory"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:maven/org.test.maven/maven-test-app@1.0.0-SNAPSHOT?type=jar",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "licenseConcluded" : "Apache-2.0",
+    "licenseDeclared" : "Apache-2.0",
+    "name" : "org.test.maven:maven-test-app",
+    "versionInfo" : "1.0.0-SNAPSHOT"
+  } ],
+  "relationships" : [ {
+    "spdxElementId" : "SPDXRef-DOCUMENT",
+    "relationshipType" : "DESCRIBES",
+    "relatedSpdxElement" : "SPDXRef-maven-org.test.maven-maven-test-app-1.0.0-SNAPSHOT"
+  }, {
+    "spdxElementId" : "SPDXRef-maven-org.apache.logging.log4j-log4j-core-2.8.1",
+    "relationshipType" : "DEPENDENCY_OF",
+    "relatedSpdxElement" : "SPDXRef-maven-org.test.maven-maven-test-app-1.0.0-SNAPSHOT"
+  }, {
+    "spdxElementId" : "SPDXRef-maven-org.apache.logging.log4j-log4j-api-2.8.1",
+    "relationshipType" : "DEPENDENCY_OF",
+    "relatedSpdxElement" : "SPDXRef-maven-org.apache.logging.log4j-log4j-core-2.8.1"
+  } ]
+}

@@ -1,0 +1,301 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:0c57f001-5b66-4363-9d06-4f4ec8703c4e",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2023-05-19T12:39:39Z",
+    "tools": [
+      {
+        "vendor": "Sonatype Inc.",
+        "name": "Nexus IQ Server",
+        "version": "1.160.0-01"
+      }
+    ],
+    "component": {
+      "group": "org.test.maven",
+      "name": "maven-test-app",
+      "version": "1.0.0-SNAPSHOT",
+      "purl": "pkg:maven/org.test.maven/maven-test-app@1.0.0-SNAPSHOT?type=jar",
+      "type": "application",
+      "bom-ref": "pkg:maven/org.test.maven/maven-test-app@1.0.0-SNAPSHOT?type=jar"
+    },
+    "properties": [
+      {
+        "name": "Scan ID",
+        "value": "0c57f0015b6643639d064f4ec8703c4e"
+      }
+    ]
+  },
+  "components": [
+    {
+      "group": "org.apache.logging.log4j",
+      "name": "log4j-core",
+      "version": "2.8.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.apache.logging.log4j/log4j-core@2.8.1?type=jar",
+      "modified": false,
+      "properties": [
+        {
+          "name": "Sonatype truncated SHA1",
+          "value": "4ac28ff2f1ddf05dae30"
+        },
+        {
+          "name": "Match State",
+          "value": "exact"
+        },
+        {
+          "name": "Identification Source",
+          "value": "Sonatype"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:maven/org.apache.logging.log4j/log4j-core@2.8.1?type=jar"
+    },
+    {
+      "group": "org.apache.logging.log4j",
+      "name": "log4j-api",
+      "version": "2.8.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.apache.logging.log4j/log4j-api@2.8.1?type=jar",
+      "modified": false,
+      "properties": [
+        {
+          "name": "Sonatype truncated SHA1",
+          "value": "e801d13612e22cad62a3"
+        },
+        {
+          "name": "Match State",
+          "value": "exact"
+        },
+        {
+          "name": "Identification Source",
+          "value": "Sonatype"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:maven/org.apache.logging.log4j/log4j-api@2.8.1?type=jar"
+    }
+  ],
+  "externalReferences": [
+    {
+      "type": "bom",
+      "url": "http://localhost:8070/ui/links/application/local-iq-app/report/0c57f0015b6643639d064f4ec8703c4e",
+      "comment": "IQ Report"
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:maven/org.test.maven/maven-test-app@1.0.0-SNAPSHOT?type=jar",
+      "dependsOn": [
+        "pkg:maven/org.apache.logging.log4j/log4j-core@2.8.1?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/org.apache.logging.log4j/log4j-core@2.8.1?type=jar",
+      "dependsOn": [
+        "pkg:maven/org.apache.logging.log4j/log4j-api@2.8.1?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/org.apache.logging.log4j/log4j-api@2.8.1?type=jar",
+      "dependsOn": []
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "id": "sonatype-2021-4560",
+      "source": {
+        "name": "SONATYPE",
+        "url": "http://localhost:8070/ui/links/vln/sonatype-2021-4560"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "SONATYPE"
+          },
+          "score": 9.0,
+          "severity": "critical",
+          "method": "other",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "cwes": [
+        200
+      ],
+      "affects": [
+        {
+          "ref": "pkg:maven/org.apache.logging.log4j/log4j-core@2.8.1?type=jar"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2020-9488",
+      "source": {
+        "name": "NVD",
+        "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-9488"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "NVD"
+          },
+          "score": 3.7,
+          "severity": "medium",
+          "method": "CVSSv3",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "cwes": [
+        295
+      ],
+      "affects": [
+        {
+          "ref": "pkg:maven/org.apache.logging.log4j/log4j-core@2.8.1?type=jar"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-45046",
+      "source": {
+        "name": "NVD",
+        "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45046"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "NVD"
+          },
+          "score": 9.0,
+          "severity": "critical",
+          "method": "CVSSv3",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "cwes": [
+        502
+      ],
+      "affects": [
+        {
+          "ref": "pkg:maven/org.apache.logging.log4j/log4j-core@2.8.1?type=jar"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2017-5645",
+      "source": {
+        "name": "NVD",
+        "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5645"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "NVD"
+          },
+          "score": 9.8,
+          "severity": "critical",
+          "method": "CVSSv3",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes": [
+        502
+      ],
+      "affects": [
+        {
+          "ref": "pkg:maven/org.apache.logging.log4j/log4j-core@2.8.1?type=jar"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-45105",
+      "source": {
+        "name": "NVD",
+        "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45105"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "NVD"
+          },
+          "score": 5.9,
+          "severity": "high",
+          "method": "CVSSv3",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "cwes": [
+        20
+      ],
+      "affects": [
+        {
+          "ref": "pkg:maven/org.apache.logging.log4j/log4j-core@2.8.1?type=jar"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-44228",
+      "source": {
+        "name": "NVD",
+        "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "NVD"
+          },
+          "score": 10.0,
+          "severity": "critical",
+          "method": "CVSSv3",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "cwes": [
+        917
+      ],
+      "affects": [
+        {
+          "ref": "pkg:maven/org.apache.logging.log4j/log4j-core@2.8.1?type=jar"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-44832",
+      "source": {
+        "name": "NVD",
+        "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44832"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "NVD"
+          },
+          "score": 6.6,
+          "severity": "high",
+          "method": "CVSSv3",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes": [
+        20
+      ],
+      "affects": [
+        {
+          "ref": "pkg:maven/org.apache.logging.log4j/log4j-core@2.8.1?type=jar"
+        }
+      ]
+    }
+  ]
+}
